@@ -1,0 +1,210 @@
+/* CSS Styles */
+/* You can add your custom styles here */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fancy font */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.hero {
+    position: relative; /* Added to position the video relative to this section */
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+    overflow: hidden; /* Added to prevent video overflow */
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Placed behind other content */
+    opacity: 0.5; /* Adjust opacity for translucency */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.featured-products, .latest-trends {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr)); /* Responsive grid */
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    padding: 20px;
+    text-align: center; /* Center the content */
+    justify-content: center;
+    align-items: center; /* Center vertically */
+
+}
+
+.product, .trend {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+.product, .trend {
+    border: 1px solid #ddd;
+    padding: 20px;
+    animation: fadeInUp 0.5s ease forwards; /* Animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product img, .trend img {
+    max-width: 100%;
+    height: auto;
+}
+
+.newsletter {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about p {
+    line-height: 1.6;
+    color: #555;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.centered-navbar {
+    text-align: center;
+}
+
+.centered-heading {
+    text-align: center;
+}
+.contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-info h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    /* Adjust grid columns for smaller screens */
+    .featured-products, .latest-trends {
+        grid-template-columns: 1fr;
+    }
+}
